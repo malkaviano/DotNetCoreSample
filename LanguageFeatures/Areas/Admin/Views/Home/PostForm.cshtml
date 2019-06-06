@@ -1,0 +1,21 @@
+@model Person
+
+<form asp-action="PostForm" asp-controller="Home">
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+
+    <div>
+        <label asp-for="City"></label>
+        <input asp-for="City" />
+        <span asp-validation-for="City"></span>
+    </div>
+
+    <div>
+        <label asp-for="Options"></label>
+        <select asp-for="SelectedValue" asp-items="Model.Options" size="Model.Options.Count()"></select>
+    </div>
+    <input type="submit" value="OK" />
+</form>
